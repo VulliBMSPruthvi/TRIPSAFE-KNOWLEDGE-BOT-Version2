@@ -18,13 +18,13 @@ if "chat_id" not in st.session_state:
     st.session_state.chat_id = str(uuid.uuid4())
     st.session_state.messages = []
 
-# Sidebar – Chat history
-st.sidebar.header("🕘 Chat History")
-all_chats = list_chats()
-for cid, meta in all_chats.items():
-    if st.sidebar.button(meta["title"], key=cid):
-        st.session_state.chat_id = cid
-        st.session_state.messages = load_chat(cid)
+# # Sidebar – Chat history
+# st.sidebar.header("🕘 Chat History")
+# all_chats = list_chats()
+# for cid, meta in all_chats.items():
+#     if st.sidebar.button(meta["title"], key=cid):
+#         st.session_state.chat_id = cid
+#         st.session_state.messages = load_chat(cid)
 
 # New Chat Button
 if st.sidebar.button("➕ Start New Chat"):
